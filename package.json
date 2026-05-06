@@ -1,0 +1,41 @@
+{
+  "name": "iyou_messenger_mailer",
+  "version": "1.0.0",
+  "author": "Aang Solihin",
+  "description": "Microservice email ringan untuk iYou Messenger — menangani verifikasi OTP, pengaturan ulang kata sandi, dan pemberitahuan perubahan akun melalui Email pengguna.",
+  "keywords": [],
+  "type": "module",
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json -f",
+    "start": "node dist/index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/dotenv-flow": "^3.3.3",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.6.0",
+    "@types/nodemailer": "^8.0.0",
+    "cors": "^2.8.6",
+    "dotenv-flow": "^4.1.0",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.5.0",
+    "helmet": "^8.1.0",
+    "nodemailer": "^8.0.7",
+    "tsc-alias": "^1.8.17",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^10.3.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "nodemon": "^3.1.14",
+    "prettier": "^3.8.3",
+    "typescript-eslint": "^8.59.2"
+  }
+}

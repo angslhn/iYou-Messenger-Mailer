@@ -42,6 +42,10 @@ app.use((_req, res) => {
   res.sendStatus(404);
 });
 
-app.listen(env.PORT, () => {
-  console.log(`[MAILER] Running on port ${env.PORT} (${env.NODE_ENV})`);
-});
+if (env.NODE_ENV === 'development') {
+  app.listen(env.PORT, () => {
+    console.log(`[MAILER] Running on port ${env.PORT} (${env.NODE_ENV})`);
+  });
+}
+
+export default app;
